@@ -20,8 +20,7 @@ itorator 를 활용해 뒤섞인 버퍼를 오래된순부터 최신순까지 �
 
 
 
-
-<img width="1910" height="749" alt="buffer1" src="https://github.com/user-attachments/assets/9e54b057-db13-42c2-878d-70e8fa986128" /> 버퍼의 최대 크기를 지정합니다
+<img width="910" height="309" alt="buffer1" src="https://github.com/user-attachments/assets/49eb6928-a7c6-4ce2-b865-4a669d704204" />  버퍼의 최대 크기를 지정합니다
 
 <img width="1122" height="206" alt="image" src="https://github.com/user-attachments/assets/cac633ef-ed63-492a-ae2b-e89324427fd7" /> 
 현재 버퍼 순서: 배열에 넣고 나머지는 주소값이고 <br>
