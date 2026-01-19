@@ -29,8 +29,8 @@ begin()호출시 순서: stl의 begin함수를 호출시 itorator클래스가 �
 
 평균값 accumulate() 최대값 max_element() 최소값 min_element() 상위, 하위 3개 partial_sort_copy() 의 매개변수에 begin() end() 함수를 넣고 각 함수들의 값을 구했습니다.
 
+ <img width="1910" height="749" alt="buffer3" src="https://github.com/user-attachments/assets/54b7ebcc-3de0-4d3a-a452-058136c184ee" />
 
-<img width="1910" height="749" alt="buffer3" src="https://github.com/user-attachments/assets/97f17046-3c0a-4130-bf43-da6de876deb6" />
 
 최대 크기를 5로 설정해서 6번째 23.1 입력했을때 %연산에 의해 처음입력한 24.5는 삭제되고 그 자리에 23.1이 들어갔습니다<br>
 순서를 나열한 begin() 실행시 오래된 순으로 나열되기 때문에 두번째입력한 25.2가 제일 오래되서 첫번째 인덱스로 이동했습니다 
