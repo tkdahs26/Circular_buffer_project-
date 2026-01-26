@@ -17,8 +17,8 @@ Tool: Visual Studio 2022 <br> <br>
 템플릿클래스활용한 다양한 데이터 타입 <br>
 head와 tail 인덱스에 %연산을 적용하여 다시 처음으로 돌아가는 원형 구조로 설계했습니다. <br>
 버퍼가 가득 찼을 때 새 데이터가 들어오면 head를 이동시켜 가장 오래된 데이터를 삭제합니다. <br>
-STL 함수를 사용할 수 있도록 itorator 내부 클래스와 operator * ++ != [] 등 오버로딩 설계했습니다. <br>
-itorator 를 활용해 뒤섞인 버퍼를 오래된순부터 최신순까지 나열합니다 <br>
+STL 함수를 사용할 수 있도록 itorator 내부 클래스 operator* ++ != [] 를 오버로딩 설계하며 시간순으로 나열합니다. <br>
+itorator 를 활용해 STL 함수를 사용합니다  <br>
 
  <br> <br> <br> <br>
 
