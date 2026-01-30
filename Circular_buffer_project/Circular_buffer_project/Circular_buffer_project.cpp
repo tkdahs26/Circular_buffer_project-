@@ -1,4 +1,4 @@
-﻿#include <iostream>   
+#include <iostream>   
 #include <numeric>    
 #include <algorithm>
 #include <vector>
@@ -17,7 +17,7 @@ public:
 public:
     // 생성자,초기화리스트
     CircularBuffer(size_t capacity) : _capacity(capacity), head(0), tail(0), _size(0) {
-        buffer = new T[_capacity];  //capacity개수의 double배열
+        buffer = new T[_capacity];  //capacity개수의 배열
     }
 
     ~CircularBuffer() { delete[] buffer; }
@@ -46,7 +46,7 @@ public:
         Iterator(T* buffer, size_t index, size_t head, size_t capacity)
             : buffer_Iter(buffer), index_Iter(index), head_Iter(head), capacity_Iter(capacity) {}
 
-        // 현재 순번의 실제 데이터를 찾아주는 std활용한 연산자함수
+        // 현재 인덱스의 실제 데이터
         T& operator*() {
      
             
@@ -67,13 +67,16 @@ public:
 
 
 
-  T& operator[](size_t index) { 
+  T& operator[](size_t index) { //논리적 인덱스 접근
 
       return buffer[(head + index) % _capacity];
 
   }
 
 
+  const T& operator[](size_t index) const {
+      return buffer[(head + index) % _capacity];
+  }
     // ------------------------------------------------------------------------
    
 
@@ -94,7 +97,7 @@ public:
     }
 
 
-    size_t capacity() const { //읽기전용메소드
+    size_t capacity() const { 
         return _capacity;
     }
 
@@ -107,14 +110,7 @@ public:
     bool empty() const {
         return _size == 0;
     }
-    T& front() {        //가장 오래된 데이터
-        return buffer[head];
-    }
-
-    T& back() {   // 가장 최신 데이터
-        return buffer[(tail + _capacity - 1) % _capacity];   // tail이 0일 경우
-    }
-
+     
 
     void pop_front() {
         if (!empty()) {
@@ -123,20 +119,6 @@ public:
         }
     }
 
-    const T& operator[](size_t index) const {
-        return buffer[(head + index) % _capacity];
-    }
-
-    const T& front() const {
-        return buffer[head];
-    }
-
-    const T& back() const {
-
-        return buffer[(tail + _capacity - 1) % _capacity];
-    }
-
-    
     // literator생성자 호출
     Iterator begin() {
         return Iterator(buffer, 0, head, _capacity);
@@ -147,15 +129,6 @@ public:
         return Iterator(buffer, _size, head, _capacity);
     }
 
-
-    Iterator begin() const {
-        return Iterator(buffer, 0, head, _capacity);
-    }
-
-    Iterator end() const {
-        return Iterator(buffer, _size, head, _capacity);
-    }
-    
 
 
 }
@@ -186,7 +159,7 @@ int main() {
 
 
         cout << "begin()호출시 순서: [";
-        for (auto it = temp_buffer.begin(); it != temp_buffer.end(); ++it) {
+        for (auto it = temp_buffer.begin(); it != temp_buffer.end(); ++it) {  
             cout << *it;
             auto next_it = it;
             if (++next_it != temp_buffer.end()) cout << ", ";
@@ -195,28 +168,21 @@ int main() {
 
 
         // STL사용한 상위 하위 추출
-        std::vector<double> top_3(3);    
-        std::vector<double> bottom_3(3); 
+        std::vector<double> top_3(3);    // 가장 작은 값 3개
+        std::vector<double> bottom_3(3); // 가장 큰 값 3개
 
-        // 하위 3개 추출
+        // 하위 3개  추출
         std::partial_sort_copy(temp_buffer.begin(), temp_buffer.end(),
             top_3.begin(), top_3.end());
 
-        // 상위 3개 추출 
+        // 상위 3개 추출  마지막에 std::greater 추가
         std::partial_sort_copy(temp_buffer.begin(), temp_buffer.end(),
             bottom_3.begin(), bottom_3.end(), std::greater<double>());
          
 
 
-
-
-
-
-
-
-
-        // STL사용한 실시간 출력
-            double max_temp = *std::max_element(temp_buffer.begin(), temp_buffer.end());
+                // STL사용한 실시간 출력
+            double max_temp = *std::max_element(temp_buffer.begin(), temp_buffer.end());//begin end 반복 operator*을 반환함
             double min_temp = *std::min_element(temp_buffer.begin(), temp_buffer.end());
             double sum_temp = std::accumulate(temp_buffer.begin(), temp_buffer.end(), 0.0);
 
