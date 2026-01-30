@@ -2,8 +2,7 @@
 
 
 
-Language: C++
- <br> <br>
+사용 언어: C++ 
 
 Tool: Visual Studio 2022 <br> <br>
 
