@@ -64,15 +64,8 @@ IDE: Visual Studio 2022
 
 
 24.5입력 <br>
-`begin()` / `end()`를 통해 시간 순서 기준으로 데이터를 순회하며,  
-STL 알고리즘을 사용해 평균, 최대, 최소 값을 계산합니다.
-
-
-현재 버퍼 순서: 배열에 넣고 나머지는 설정안해서 생긴 임의의 데이터 값입니다 <br>
-begin()호출시 순서: stl의 begin함수를 호출시 itorator클래스가 순서를 오래된순부터 최신순까지 나열합니다.<br>
-
-
-평균값 accumulate() 최대값 max_element() 최소값 min_element() 상위, 하위 3개 partial_sort_copy()은 stl함수이기 때문에 별도의 계산 없이 매개변수에 begin() end() 함수를 넣고 각 함수들의 값을 구했습니다.
+begin()  end()를 통해 시간 순서 기준으로 데이터를 순회하며,  
+STL 알고리즘을 사용해 평균, 최대, 최소 , 최대값 3개 최소값 3개를 계산합니다.
 
 
 <img width="1910" height="749" alt="buffer31" src="https://github.com/user-attachments/assets/cfa361f3-2ab9-4c3b-aa99-fd7ea4608595" />
