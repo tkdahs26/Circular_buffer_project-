@@ -59,7 +59,15 @@ IDE: Visual Studio 2022
 <img width="910" height="309" alt="buffer1" src="https://github.com/user-attachments/assets/49eb6928-a7c6-4ce2-b865-4a669d704204" />  버퍼의 최대 크기를 지정합니다
 
 <img width="1122" height="206" alt="image" src="https://github.com/user-attachments/assets/cac633ef-ed63-492a-ae2b-e89324427fd7" /> 
+온도를 입력하면 버퍼에 저장되며,  
+버퍼가 가득 찬 이후에는 가장 오래된 데이터부터 자동으로 제거됩니다.
+
+
 24.5입력 <br>
+`begin()` / `end()`를 통해 시간 순서 기준으로 데이터를 순회하며,  
+STL 알고리즘을 사용해 평균, 최대, 최소 값을 계산합니다.
+
+
 현재 버퍼 순서: 배열에 넣고 나머지는 설정안해서 생긴 임의의 데이터 값입니다 <br>
 begin()호출시 순서: stl의 begin함수를 호출시 itorator클래스가 순서를 오래된순부터 최신순까지 나열합니다.<br>
 
