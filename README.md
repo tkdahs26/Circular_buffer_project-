@@ -15,11 +15,11 @@
 
 버퍼가 가득 차면 가장 오래된 데이터가 자동으로 제거됨 <br>
 
-내부 Iterator 클래스를 구현해 begin() / end() 제공 <br>
+내부 Iterator 클래스를 구현해 begin() / end() 을 만들고 STL 적용 가능 <br>
 
 입력 시간 순서 기준 인덱스 순서 변경 <br>
 
-STL 알고리즘 적용 가능 <br>
+ <br>
 
  <br> <br> 
 
