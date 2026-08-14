@@ -25,11 +25,11 @@
 
 ### 배운 점 <br>
 
-STL 알고리즘은 iterator 규칙에 의해 동작한다는 점 <br>
+STL 알고리즘은 iterator 규칙에 의해 동작<br>
 
-원형 구조에서도 시간 순서로 순회하기 위해 Iterator 설계가 필요하다는 점 <br>
+원형 구조에서도 시간 순서로 순회하기 위해 Iterator 설계가 필요 <br>
 
- % 연산을 활용해 head / tail 기반의 원형 구조를 구현할 수 있다는 점 <br>
+ % 연산을 활용해 head / tail 기반의 원형 구조를 구현 <br>
   
 
  <br> <br>
